@@ -1,0 +1,454 @@
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS E CORES                      */
+/* ================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.secao {
+    padding: 60px 0;
+}
+
+.fundo-cinza {
+    background-color: #f7f9fa;
+}
+
+.titulo-secao {
+    text-align: center;
+    color: #0b4f8a;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.texto-destaque {
+    text-align: center;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+/* ================================================= */
+/* CABEÇALHO E NAVEGAÇÃO                             */
+/* ================================================= */
+.cabecalho {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #0b4f8a;
+}
+
+/* ================================================= */
+/* BOTÕES                                            */
+/* ================================================= */
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.botao-destaque {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.botao-primario {
+    background-color: #0b4f8a;
+    color: #ffffff;
+}
+
+.botao-secundario {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+/* ================================================= */
+/* 1. BANNER PRINCIPAL                               */
+/* ================================================= */
+.banner {
+    position: relative;
+    background-color: #1a252f;
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.banner-imagem img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-conteudo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.banner-conteudo p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+}
+
+.banner-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ================================================= */
+/* CARDS E GRIDS (ORGANIZAÇÃO RESPONSIVA)            */
+/* ================================================= */
+.grid-tres-colunas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.grid-duas-colunas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border-top: 4px solid #0b4f8a;
+}
+
+.card-institucional, .card-servico, .card-projeto {
+    padding: 25px;
+}
+
+.card-institucional h3, .card-servico h3, .card-projeto h3 {
+    color: #0b4f8a;
+    margin-bottom: 10px;
+}
+
+.card-servico ul {
+    margin-left: 20px;
+}
+
+.card-servico li {
+    margin-bottom: 8px;
+}
+
+.card-atividade img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-corpo {
+    padding: 20px;
+}
+
+.card-corpo h3 {
+    margin-bottom: 10px;
+    color: #0b4f8a;
+}
+
+/* ================================================= */
+/* 6. GALERIA DE FOTOS E MODAL                       */
+/* ================================================= */
+.bloco-galeria {
+    margin-bottom: 45px;
+}
+
+.titulo-categoria {
+    color: #0b4f8a;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e1e8ed;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.item-galeria {
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #eee;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.04);
+}
+
+/* Modal da Imagem */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 6px;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Janela Modal da Imagem Ampliada */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 6px;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* RODAPÉ                                            */
+/* ================================================= */
+.rodape {
+    background-color: #0b4f8a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ================================================= */
+/* RESPONSIVIDADE (TELAS MENORES / CELULARES)        */
+/* ================================================= */
+@media (max-width: 768px) {
+    .container-cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+/* ==============================================
+   APAE - AVISO DE IMAGENS GERADAS POR IA
+   BANNER | ATIVIDADES | GALERIA | MODAL
+
+   AVISO VISÍVEL SOMENTE AO PASSAR O MOUSE
+============================================== */
+
+/* 1. Preparação dos elementos */
+.item-galeria,
+.card-atividade,
+.banner {
+    position: relative;
+}
+
+/* 2. Aviso padrão - inicialmente invisível */
+.item-galeria::after,
+.card-atividade::after,
+.banner::after,
+.modal::after {
+    content: "ⓘ Imagem ilustrativa gerada por inteligência artificial.";
+
+    position: absolute;
+    right: 8px;
+
+    width: max-content;
+    max-width: calc(100% - 16px);
+    box-sizing: border-box;
+
+    padding: 6px 10px;
+    border-radius: 5px;
+
+    background: rgba(0, 0, 0, 0.78);
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+
+    /* Aviso completamente escondido */
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* 3. GALERIA - canto inferior direito */
+.item-galeria::after {
+    bottom: 8px;
+}
+
+/* 4. ATIVIDADES - sobre a imagem */
+.card-atividade::after {
+    top: 204px;
+    bottom: auto;
+    transform: translateY(calc(-100% - 8px));
+}
+
+/* 5. BANNER INICIAL - canto superior direito */
+.banner::after {
+    top: 12px;
+    bottom: auto;
+    right: 12px;
+}
+
+/* 6. MODAL - imagem ampliada */
+.modal::after {
+    bottom: 15px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+}
+
+/* 7. MOSTRAR APENAS AO PASSAR O MOUSE */
+.item-galeria:hover::after,
+.card-atividade:hover::after,
+.banner:hover::after,
+.modal:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 8. ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 600px) {
+    .item-galeria::after,
+    .card-atividade::after,
+    .banner::after,
+    .modal::after {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .banner::after {
+        top: 8px;
+        right: 8px;
+    }
+}
